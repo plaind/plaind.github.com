@@ -1,10 +1,76 @@
 /* ============================== */
 /* ! Layout for desktop version   */
 /* ============================== */
+/* customising selection */
+  ::selection{background:#333; color:#fff}
+  ::-moz-selection{background:#333; color:#fff}
 
-	body {
+  @mixin transition_button{
+    transition-property: color, background;
+    transition-duration: .3s, .7s;
+    transition-timing-function: linear, ease-in;
+    -webkit-transition-property:color, background;
+    -webkit-transition-duration: .3s, .7s;
+    -webkit-transition-timing-function: linear, ease-in;
+    -moz-transition-property:color, background;
+    -moz-transition-duration: .3s, .7s;
+    -moz-transition-timing-function: linear, ease-in;
+    -o-transition-property:color, background;
+    -o-transition-duration: .3s, .7s;
+    -o-transition-timing-function: linear, ease-in;
+  }
 
-	}
+  body {
+    p.logo_text{
+      font-family: "pt-sans-narrow";
+      font-size: 3em;
+      line-height: 3em;
+    }
+    p.motto{
+      font-family: "sorts-mill-goudy";
+      font-size: 1em;
+      line-height: 1em;
+    }
+    .container{
+      padding-top: 15%;
+    }
+    .row{
+      text-align: center;
+    }
+    nav{
+      margin-top: 5%;
+      font-family: "pt-serif";
+      ul{
+        li{
+          margin-right: 10px;
+          display: inline-block;
+          line-height: 48px;
+        }
+      }
+    }
+    a{
+      color: #fff;
+      background: #333;
+      font-family: "pt-sans-narrow";
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 700;
+      padding: 0 25px;
+      color: white;
+      text-decoration: none;
+      display: block;
+      width: 70px;
+      @include transition_button;
+      &:link {color:#fff;}
+      &:visited {color:#fff;}
+      &:hover {
+        color: #3C3C3C;
+        background: #1FFFDB;
+      }
+      &:active {color:#fff;}
+    }
+  }
 
 
 /* ============================= */

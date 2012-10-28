@@ -1,1 +1,1 @@
-(function(){base.coffee}).call(this);
+(function(){var a;a=function(){try{return Typekit.load()}catch(b){}};$(function(){return a()})}).call(this);
