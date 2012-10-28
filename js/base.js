@@ -1,0 +1,1 @@
+(function(){base.coffee}).call(this);

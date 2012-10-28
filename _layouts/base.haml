@@ -1,0 +1,20 @@
+!!!
+%html{:lang => 'en'}
+  %head
+    %meta{:charset => "utf-8"}
+    %link{:rel => "stylesheet", :href => "/css/reset_base.css"}
+    %link{:rel => "stylesheet", :href => "/css/1140.css"}
+    %link{:rel => "stylesheet", :href => "/css/ie.css"}
+    %link{:rel => "stylesheet", :href => "/css/variables.css"}
+    %link{:rel => "stylesheet", :href => "/css/mixins.css"}
+    %link{:rel => "stylesheet", :href => "/css/styles.css"}
+    %link{:rel => "author", :href => "/humans.txt"}
+    %script{:src => "/js/jquery-1.8.2.min.js"}
+    %script{:src => "/js/css3-mediaqueries.js"}
+    %script{:src => "/js/base.js"}
+    %title {{ page.title }}
+  %body
+    %header
+    %section.container
+      {{ content }}
+    %footer

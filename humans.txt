@@ -1,0 +1,22 @@
+/* TEAM */
+  Author: Dawid Wozniak
+  Contact: dawidwu [at] plaind.pl
+  Twitter: @dawidwu
+  From: Poznan, Poland
+
+/* THANKS */
+
+  /* CSS */
+  Reset css inspired by Eric A. Meyer
+  Website: http://meyerweb.com
+  Twitter @meyerweb
+
+  1140 CSS GRID by Andy Taylor
+  Website: http://cssgrid.net/
+  Twitter @andytlr
+
+/* SITE */
+  Last update:2012/10/28
+  Language:English
+  Doctype:HTML5
+  IDE: Sublime Text
