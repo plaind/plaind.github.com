@@ -21,6 +21,41 @@
   }
 
   body {
+    .logo_container{
+      text-align: center;
+      .logo{
+        margin: 0 auto;
+        -webkit-transform: rotate(-35deg);
+        width: 109px;
+        height: 114px;
+        .outer{
+          width: 52px;
+          height: 80px;
+          border: 10px solid #4B4B4B;
+          position: relative;
+          left: 5px;
+          top: 11px;
+          .inner{
+            width: 12px;
+            height: 39px;
+            position: absolute;
+            left: 51px;
+            background: white;
+            top: 29px;
+            span.tilda{
+              font-size: 92px;
+              font-weight: 700;
+              line-height: 25px;
+              display: block;
+              -webkit-transform: rotate(30deg);
+              position: absolute;
+              top: -2px;
+              left: -16px;
+            }
+          }
+        }
+      }
+    }
     p.logo_text{
       font-family: "pt-sans-narrow";
       font-size: 3em;
@@ -32,7 +67,7 @@
       line-height: 1em;
     }
     .container{
-      padding-top: 15%;
+      padding-top: 14%;
     }
     .row{
       text-align: center;
