@@ -19,13 +19,20 @@
     -o-transition-duration: .3s, .7s;
     -o-transition-timing-function: linear, ease-in;
   }
+  @mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation='#{$degrees}');
+  }
 
   body {
     .logo_container{
       text-align: center;
       .logo{
         margin: 0 auto;
-        -webkit-transform: rotate(-35deg);
+        @include rotate(-35deg);
         width: 109px;
         height: 114px;
         .outer{
@@ -47,7 +54,7 @@
               font-weight: 700;
               line-height: 25px;
               display: block;
-              -webkit-transform: rotate(30deg);
+              @include rotate(30deg);
               position: absolute;
               top: -2px;
               left: -16px;
