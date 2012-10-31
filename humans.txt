@@ -15,6 +15,9 @@
   Website: http://cssgrid.net/
   Twitter @andytlr
 
+  Krzysztof Krupski
+  a bit of css help.
+
 /* SITE */
   Last update:2012/10/28
   Language:English

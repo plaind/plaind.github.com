@@ -2,117 +2,161 @@
 /* ! Layout for desktop version   */
 /* ============================== */
 /* customising selection */
-  ::selection{background:#333; color:#fff}
-  ::-moz-selection{background:#333; color:#fff}
 
-  @mixin transition_button{
-    transition-property: color, background;
-    transition-duration: .3s, .7s;
-    transition-timing-function: linear, ease-in;
-    -webkit-transition-property:color, background;
-    -webkit-transition-duration: .3s, .7s;
-    -webkit-transition-timing-function: linear, ease-in;
-    -moz-transition-property:color, background;
-    -moz-transition-duration: .3s, .7s;
-    -moz-transition-timing-function: linear, ease-in;
-    -o-transition-property:color, background;
-    -o-transition-duration: .3s, .7s;
-    -o-transition-timing-function: linear, ease-in;
-  }
-  @mixin rotate($degrees) {
-    -webkit-transform: rotate($degrees);
-    -moz-transform: rotate($degrees);
-    -o-transform: rotate($degrees);
-    -moz-transform: rotate($degrees);
-    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation='#{$degrees}');
-  }
+::selection{background:#333; color:#fff}
+::-moz-selection{background:#333; color:#fff}
 
-  body {
-    .logo_container{
-      text-align: center;
-      .logo{
-        margin: 0 auto;
-        @include rotate(-35deg);
-        width: 109px;
-        height: 114px;
-        .outer{
-          width: 52px;
-          height: 80px;
-          border: 10px solid #4B4B4B;
-          position: relative;
-          left: 5px;
-          top: 11px;
-          .inner{
-            width: 12px;
-            height: 39px;
+@mixin transition_button{
+  transition-property: color, background;
+  transition-duration: .3s, .7s;
+  transition-timing-function: linear, ease-in;
+  -webkit-transition-property:color, background;
+  -webkit-transition-duration: .3s, .7s;
+  -webkit-transition-timing-function: linear, ease-in;
+  -moz-transition-property:color, background;
+  -moz-transition-duration: .3s, .7s;
+  -moz-transition-timing-function: linear, ease-in;
+  -o-transition-property:color, background;
+  -o-transition-duration: .3s, .7s;
+  -o-transition-timing-function: linear, ease-in;
+}
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-35deg);
+  }
+}
+
+@-moz-keyframes rotation {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(-35deg);
+  }
+}
+
+@-o-keyframes rotation {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(-35deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-35deg);
+  }
+}
+
+body {
+  .logo_container{
+    text-align: center;
+    .logo{
+      -webkit-animation: rotation 1.4s 1 linear; /* Saf5, Chrome */
+      -moz-animation: rotation 1.4s 1 linear; /* FF5+ */
+      -o-animation: rotation 1.4s 1 linear; /* Opera 12+ */
+
+      -webkit-animation-fill-mode: forwards;
+      -moz-animation-fill-mode: forwards;
+      -o-animation-fill-mode: forwards;
+
+      @include rotate(-35deg);
+      margin: 0 auto;
+      width: 109px;
+      height: 114px;
+      .outer{
+        width: 52px;
+        height: 80px;
+        border: 10px solid #4B4B4B;
+        position: relative;
+        left: 5px;
+        top: 11px;
+        .inner{
+          width: 12px;
+          height: 39px;
+          position: absolute;
+          left: 51px;
+          background: white;
+          top: 29px;
+          span.tilda{
+            font-size: 92px;
+            font-weight: 700;
+            line-height: 25px;
+            display: block;
+            @include rotate(30deg);
             position: absolute;
-            left: 51px;
-            background: white;
-            top: 29px;
-            span.tilda{
-              font-size: 92px;
-              font-weight: 700;
-              line-height: 25px;
-              display: block;
-              @include rotate(30deg);
-              position: absolute;
-              top: -2px;
-              left: -16px;
-            }
+            top: -2px;
+            left: -16px;
           }
         }
       }
     }
-    p.logo_text{
-      font-family: "pt-sans-narrow";
-      font-size: 3em;
-      line-height: 3em;
-    }
-    p.motto{
-      font-family: "sorts-mill-goudy";
-      font-size: 1em;
-      line-height: 1em;
-    }
-    .container{
-      padding-top: 14%;
-    }
-    .row{
-      text-align: center;
-    }
-    nav{
-      margin-top: 5%;
-      font-family: "pt-serif";
-      ul{
-        li{
-          margin-right: 10px;
-          display: inline-block;
-          line-height: 48px;
-        }
+  }
+  p.logo_text{
+    font-family: "pt-sans-narrow";
+    font-size: 3em;
+    line-height: 3em;
+  }
+  p.motto{
+    font-family: "sorts-mill-goudy";
+    font-size: 1em;
+    line-height: 1em;
+  }
+  .container{
+    padding-top: 14%;
+  }
+  .row{
+    text-align: center;
+  }
+  nav{
+    margin-top: 5%;
+    font-family: "pt-serif";
+    ul{
+      li{
+        margin-right: 10px;
+        display: inline-block;
+        line-height: 48px;
       }
-    }
-    a{
-      color: #fff;
-      background: #333;
-      font-family: "pt-sans-narrow";
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-size: 1em;
-      font-weight: 700;
-      padding: 0 25px;
-      color: white;
-      text-decoration: none;
-      display: block;
-      width: 70px;
-      @include transition_button;
-      &:link {color:#fff;}
-      &:visited {color:#fff;}
-      &:hover {
-        color: #3C3C3C;
-        background: #1FFFDB;
-      }
-      &:active {color:#fff;}
     }
   }
+  a{
+    color: #fff;
+    background: #333;
+    font-family: "pt-sans-narrow";
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 0 25px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 70px;
+    @include transition_button;
+    &:link {color:#fff;}
+    &:visited {color:#fff;}
+    &:hover {
+      color: #3C3C3C;
+      background: #1FFFDB;
+    }
+    &:active {color:#fff;}
+  }
+}
 
 
 /* ============================= */
@@ -121,8 +165,8 @@
 
 @media handheld, only screen and (max-width: 767px) {
 
-	body {
+  body {
 
-	}
+  }
 
 }
