@@ -80,7 +80,9 @@
 }
 
 body {
-  .logo_container{
+  #intro{
+    padding-top: 10%;
+    .logo_container{
     text-align: center;
     .logo{
       -webkit-animation: rotation 1.4s 1 linear; /* Saf5, Chrome */
@@ -122,55 +124,53 @@ body {
         }
       }
     }
-  }
-  p.logo_text{
-    font-family: "pt-sans-narrow";
-    font-size: 3em;
-    line-height: 3em;
-  }
-  p.motto{
-    font-family: "sorts-mill-goudy";
-    font-size: 1em;
-    line-height: 1em;
-  }
-  .container{
-    padding-top: 14%;
-  }
-  .row{
-    text-align: center;
-  }
-  nav{
-    margin-top: 5%;
-    font-family: "pt-serif";
-    ul{
-      li{
-        margin-right: 10px;
-        display: inline-block;
-        line-height: 48px;
+    }
+    nav{
+      margin-top: 5%;
+      font-family: "pt-serif";
+      ul{
+        li{
+          margin-right: 10px;
+          display: inline-block;
+          line-height: 48px;
+        }
       }
     }
-  }
-  a{
-    color: #fff;
-    background: #333;
-    font-family: "pt-sans-narrow";
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: 700;
-    padding: 0 25px;
-    color: white;
-    text-decoration: none;
-    display: block;
-    width: 70px;
-    @include transition_button;
-    &:link {color:#fff;}
-    &:visited {color:#fff;}
-    &:hover {
-      color: #3C3C3C;
-      background: #1FFFDB;
+    a{
+      color: #fff;
+      background: #333;
+      font-family: "pt-sans-narrow";
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 700;
+      padding: 0 25px;
+      color: white;
+      text-decoration: none;
+      display: block;
+      width: 70px;
+      @include transition_button;
+      &:link {color:#fff;}
+      &:visited {color:#fff;}
+      &:hover {
+        color: #3C3C3C;
+        background: #1FFFDB;
+      }
+      &:active {color:#fff;}
     }
-    &:active {color:#fff;}
+    p.logo_text{
+      font-family: "pt-sans-narrow";
+      font-size: 3em;
+      line-height: 3em;
+    }
+    p.motto{
+      font-family: "sorts-mill-goudy";
+      font-size: 1em;
+      line-height: 1em;
+    }
+    .row{
+      text-align: center;
+    }
   }
 }
 
