@@ -80,50 +80,72 @@
 }
 
 body {
-  #intro{
-    padding-top: 10%;
-    .logo_container{
-    text-align: center;
-    .logo{
-      -webkit-animation: rotation 1.4s 1 linear; /* Saf5, Chrome */
-      -moz-animation: rotation 1.4s 1 linear; /* FF5+ */
-      -o-animation: rotation 1.4s 1 linear; /* Opera 12+ */
-
-      -webkit-animation-fill-mode: forwards;
-      -moz-animation-fill-mode: forwards;
-      -o-animation-fill-mode: forwards;
-
-      @include rotate(-35deg);
-      margin: 0 auto;
-      width: 109px;
-      height: 114px;
-      .outer{
-        width: 52px;
-        height: 80px;
-        border: 10px solid #4B4B4B;
-        position: relative;
-        left: 5px;
-        top: 11px;
-        .inner{
-          width: 12px;
-          height: 39px;
-          position: absolute;
-          left: 51px;
-          background: white;
-          top: 29px;
-          span.tilda{
-            font-size: 92px;
-            font-weight: 700;
-            line-height: 25px;
-            display: block;
-            @include rotate(30deg);
-            position: absolute;
-            top: -2px;
-            left: -16px;
-          }
+  header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5000;
+    nav{
+      ul{
+        li{
+          display: inline;
         }
       }
     }
+  }
+  max-height:1000px;
+  background: red;
+  section{
+    position: relative;
+    top: 0;
+    height: 1000px;
+  }
+  #intro{
+    z-index:1;
+    background: white;
+    .logo_container{
+      padding-top: 10%;
+      text-align: center;
+      .logo{
+        -webkit-animation: rotation 1.4s 1 linear; /* Saf5, Chrome */
+        -moz-animation: rotation 1.4s 1 linear; /* FF5+ */
+        -o-animation: rotation 1.4s 1 linear; /* Opera 12+ */
+
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        -o-animation-fill-mode: forwards;
+
+        @include rotate(-35deg);
+        margin: 0 auto;
+        width: 109px;
+        height: 114px;
+        .outer{
+          width: 52px;
+          height: 80px;
+          border: 10px solid #4B4B4B;
+          position: relative;
+          left: 5px;
+          top: 11px;
+          .inner{
+            width: 12px;
+            height: 39px;
+            position: absolute;
+            left: 51px;
+            background: white;
+            top: 29px;
+            span.tilda{
+              font-size: 92px;
+              font-weight: 700;
+              line-height: 25px;
+              display: block;
+              @include rotate(30deg);
+              position: absolute;
+              top: -2px;
+              left: -16px;
+            }
+          }
+        }
+      }
     }
     nav{
       margin-top: 5%;
@@ -170,6 +192,18 @@ body {
     }
     .row{
       text-align: center;
+    }
+  }
+
+  #work{
+    background: #FFED1F;
+    z-index: 2000;
+  }
+  #about{
+    background: #1FFFDB;
+    z-index: 1000;
+    .row{
+      padding-top: 5%;
     }
   }
 }
